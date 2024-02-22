@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}  <!-- clients.html hérite de layout.html -->
+{% block content %}
+<div class="row">
+    <div class="col">
+        <h2>Liste des clients</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <!-- Ajoutez d'autres colonnes si nécessaire -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for client in clients %}
+                    <tr>
+                        <td>{{ client.nom }}</td>
+                        <td>{{ client.prenom }}</td>
+                        <td>{{ client.email }}</td>
+                        <!-- Affichez d'autres attributs du client si nécessaire -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
