@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{ url_for('static', filename='styles/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+            <div class="container">
+                <a href="{{ url_for('accueil') }}" class="navbar-brand">
+                    <img src="{{ url_for('static', filename='assets/images/ACME.gif') }}" height="80px"
+                        class="rounded-circle">
+                    <!-- <video width="320" height="240" autoplay>
+                        <source src="{{ url_for('static', filename='assets/images/ACME.mp4') }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>-->
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Clients</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Produits</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Commandes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Statistiques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Se connecter</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container text-center">
+
+
+        {% block content %}{% endblock %}
+
+
+    </div>
+    <footer class="page-footer font-small blue mt-auto">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2024 Copyright:
+            <a href="/"> MSPRtop.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>
