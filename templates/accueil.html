@@ -1,0 +1,8 @@
+<!-- page d'accueil -->
+{% extends 'layout.html' %} <!-- index.html herite de layout.html -->
+{% block content %}
+
+<h2>Bienvenue à la page d'accueil !</h2>
+<img src="{{ url_for('static', filename='assets/images/image.jpg') }}">
+
+{% endblock %}
